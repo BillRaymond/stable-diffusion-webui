@@ -10,7 +10,7 @@ import json
 from modules import cmd_args
 from modules.paths_internal import script_path, extensions_dir
 
-commandline_args = os.environ.get('COMMANDLINE_ARGS', "--no-half --skip-torch-cuda-test")
+commandline_args = os.environ.get('COMMANDLINE_ARGS', "--share --no-half --skip-torch-cuda-test")
 sys.argv += shlex.split(commandline_args)
 
 args, _ = cmd_args.parser.parse_known_args()
